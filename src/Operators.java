@@ -1,42 +1,49 @@
 public class Operators {
     public static void main(String[] args) {
-        int a = 2 + 2;
-        int b = a * 6;
-        int c = b / 7;
-        int d = c - a;
-        int e = -d;
-        System.out.println("a = "+ a);
-        System.out.println("b = "+ b);
-        System.out.println("c = "+ c);
-        System.out.println("d = "+ d);
-        System.out.println("e = "+ e);
+        int a = 3; // 0 + 2 + 1 or 0011 in binary
+        int b = 6; // 4 + 2 + 0 or 0110 in binary
+        int c = a | b;
+        int d = a & b;
+        int e = a ^ b;
+        int f = (~a | b) | (a & ~b);
+        int g = ~a & 0x0f;
 
-        double da = 8 + 8;
-        double db = da * 5;
-        double dc = db / 9;
-        double dd = dc - a;
-        double de = -dd;
-        System.out.println("da = "+ da);
-        System.out.println("db = "+ db);
-        System.out.println("dc = "+ dc);
-        System.out.println("dd = "+ dd);
-        System.out.println("de = "+ de);
 
-        int x = 52;
-        double y = 42.25;
-        System.out.println("x mod 10 = " + x % 10);
-        System.out.println("y mod 10 = " + y % 10);
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+        System.out.println("a|b = " + c);
+        System.out.println("a&b = " + d);
+        System.out.println("a^b = " + e);
+        System.out.println("a|b | a&~b = " + f);
+        System.out.println("~a = " + g);
 
-        int a1 = 1;
-        int b1 = 2;
-        int c1 = 3;
-        a1 += 5;
-        b1 *= 4;
-        c1 += a1 * b1;
-        c1 %= 8;
-        System.out.println("a = "+ a1);
-        System.out.println("b = "+ b1);
-        System.out.println("c = "+ c1);
+        byte a1 = 64,b1;
+        int i;
+        i = a1 << 2;
+        b1 = (byte) (a1 << 2);
+        System.out.println("Original value of a1:"+ a1);
+        System.out.println("i and b1: "+ i + "" + b1);
+
+        boolean a2 = true;
+        boolean b2 = false;
+        boolean c2 = a2 | b2;
+        boolean d2 = a2 & b2;
+        boolean e2 = a2 ^ b2;
+        boolean f2 = (!a2 & b2) | (a2 & !b2 );
+        boolean g2 = !a2;
+
+        System.out.println();
+        System.out.println("a2 = "+ a2);
+        System.out.println("b2 = "+ b2);
+        System.out.println("a2 | b2 = "+ c2);
+        System.out.println("a2 & b2 = "+ d2);
+        System.out.println("a2 ^ b2 = "+ e2);
+        System.out.println("!a2&b2|a2&!b2 = "+ f2);
+        System.out.println("!a2 = "+ g2);
+
+
+
+
 
 
     }
