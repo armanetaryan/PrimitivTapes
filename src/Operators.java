@@ -1,45 +1,86 @@
 public class Operators {
     public static void main(String[] args) {
-        int a = 3; // 0 + 2 + 1 or 0011 in binary
-        int b = 6; // 4 + 2 + 0 or 0110 in binary
-        int c = a | b;
-        int d = a & b;
-        int e = a ^ b;
-        int f = (~a | b) | (a & ~b);
-        int g = ~a & 0x0f;
+
+        //max of numbers
 
 
-        System.out.println("a = " + a);
-        System.out.println("b = " + b);
-        System.out.println("a|b = " + c);
-        System.out.println("a&b = " + d);
-        System.out.println("a^b = " + e);
-        System.out.println("a|b | a&~b = " + f);
-        System.out.println("~a = " + g);
+        int a  = 5, b = 6, c = 7, d = 8;
+        int max = a;
 
-        byte a1 = 64,b1;
-        int i;
-        i = a1 << 2;
-        b1 = (byte) (a1 << 2);
-        System.out.println("Original value of a1:"+ a1);
-        System.out.println("i and b1: "+ i + "" + b1);
+        if (b > max)
+            max = b;
+        if (c > max)
+            max = c;
+        if (d > max)
+            max = d;
 
-        boolean a2 = true;
-        boolean b2 = false;
-        boolean c2 = a2 | b2;
-        boolean d2 = a2 & b2;
-        boolean e2 = a2 ^ b2;
-        boolean f2 = (!a2 & b2) | (a2 & !b2 );
-        boolean g2 = !a2;
+        System.out.println("max is: " + max);
 
-        System.out.println();
-        System.out.println("a2 = "+ a2);
-        System.out.println("b2 = "+ b2);
-        System.out.println("a2 | b2 = "+ c2);
-        System.out.println("a2 & b2 = "+ d2);
-        System.out.println("a2 ^ b2 = "+ e2);
-        System.out.println("!a2&b2|a2&!b2 = "+ f2);
-        System.out.println("!a2 = "+ g2);
+
+        //Triangle
+
+        int a1 = 5;
+        int b1 = 6;
+        int c1 = 2;
+        if (a1 + b1 > c1 && a1 + c1 > b1 && c1 + b1 > a1)
+            System.out.println("with" + a1 + ", " + b1 + ", " + c1 + "is possible to make a triangle");
+        else
+            System.out.println("with" + a1 + ", " + b1 + ", " + c1 + "is not possible to make a triangle");
+
+
+        // Checking is triangle raight triangle or not
+
+        int slingshot = a1;
+        int page1 = b1;
+        int page2 = c1;
+        if (b1 > slingshot)
+            slingshot = b1;
+        page1 = a1;
+        if (c1 > slingshot)
+            slingshot = c1;
+        page2 = b1;
+        if (page1 * page1 + page2 * page2 == slingshot * slingshot)
+            System.out.println("The triangle is a right triangle");
+        else
+            System.out.println("The triangle is not a right triangle");
+
+
+
+        //week days
+
+        int date = 6;
+        switch (date){
+            case 1:
+                System.out.println("Monday " );
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+            case 7:
+                System.out.println("Weekend " + "\uD83E\uDD73" + "\uD83E\uDD73" + "\uD83E\uDD73"); // run to see
+                break;
+            default:
+                System.out.println("incorrect day number");
+        }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -48,3 +89,5 @@ public class Operators {
 
     }
 }
+
+
