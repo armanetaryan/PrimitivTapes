@@ -3,8 +3,7 @@ public class Operators {
 
         //max of numbers
 
-
-        int a  = 5, b = 6, c = 7, d = 8;
+        int a  = 4, b = 3, c = 6, d = 9;
         int max = a;
 
         if (b > max)
