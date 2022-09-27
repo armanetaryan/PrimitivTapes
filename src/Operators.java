@@ -1,72 +1,53 @@
 public class Operators {
     public static void main(String[] args) {
-        // Find even numbers between 0 and 100
-        for (int i = 0; i < 100; i++) {
-            if (i % 2 == 0) {
-                System.out.print(i + " ");
-            }
+        //Sort arrays : ascending,
+        int[] array = new int[20];
+        int a = 1;
+        for (int i = 0; i < array.length; i++) {
+            array[i] = a++;
+            System.out.print(array[i] + " ");
+
         }
-        System.out.println();
-        System.out.println("*+*+*+*+*");
 
-        // Find odd numbers between 0 and 100
-        int i = 0;
-        while (i < 100) {
-            if (i % 2 != 0) {
-                System.out.print(i + " ");
-            }
-            i++;
+        //Sort arrays : descending
+
+        int[] array1 = new int[20];
+        int x = 20;
+        for (int j = 0; j < array.length; j++) {
+            array[j] = x--;
+            System.out.println(array[j] + " ");
+            System.out.println("");
+            System.out.println("");
+
         }
-        System.out.println();
-        System.out.println("*+*+*+*+*");
 
-        // Find all numbers between 0 and 100 that are divisible by three
-        for (int j = 0; j < 100; j++) {
-            if (j % 3 == 0) {
-                System.out.print(j + " ");
-            }
-        }
-        System.out.println();
-        System.out.println("*+*+*+*+*");
 
-        // Find the factorial of all numbers between 1 and 100
-        long f = 1L;
-        int i1 = 1;
-        while (i1 < 100) {
-            f *= i1;
-            System.out.println("Factorial of " + i1 + " is " + f);
-            i1++;
-        }
-        System.out.println();
-        System.out.println("*+*+*+*+*");
+        //Sort matrix ascending
 
-        // Find the sum of all numbers between 0 and 100
-        int sum = 0;
-        for (int a = 0; a < 100; a++) {
-            sum += a;
-        }
-        System.out.println(sum);
-        System.out.println("*+*+*+*+*");
 
-       //figures
-
-        int x;
-        for (x = 0; x < 40; x++) {
-            int z;
-            for (z = x; z < 15 ; z++)
-                System.out.print("&^");
+       System.out.println();
+        int matric [][] = new int [4][5];
+        int m = 0;
+        for(int k = 0; k < 4; k++) {
             System.out.println();
-        }
-        //for if while
-        int in1 = 1;
-        while (in1 < 11) {
-            System.out.println("in1 is " + in1);
-            System.out.println("*+*+*+*+*");
-            for (int j = 1; j < 11; j++) {
-                System.out.println("j is " + j);
+            for (int j = 0; j < 5; j++) {
+                matric[k][j] = m++;
+                System.out.print(matric [k][j] + " ");
             }
-            in1++;
-            System.out.println("*+*+*+*+*");
+
+               //Sort matrix descending
+
+            System.out.println();
+            int matric1 [][] = new int [4][5];
+            int m1 = 19;
+            for(int c = 0; c < 4; c++ ){
+                System.out.println();
+                for(int z = 0; z < 5; z++){
+                    matric1[c][z]= m1--;
+                    System.out.print(matric1 [c][z] + " ");
+                }
+            }
+
         }
 
 
